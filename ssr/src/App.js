@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import About from './container/About';
+import Profile from './container/Profile';
 
 function App() {
+  const [state,setState]=
+  ('')
+
+
+  let check
+
+  if (state==='about'){
+    check=<About></About>
+  }
+  else if( state==='profile'){
+    check=<Profile></Profile> 
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <button onClick={()=>setState('about')}> About</button>
+      <button onClick={()=>setState('profile')} > Profile</button>
+      {check}
+      
     </div>
   );
 }
