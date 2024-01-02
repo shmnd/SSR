@@ -1,8 +1,8 @@
 // import { useState } from 'react';
-import './App.css';
-import About from './container/About';
-import Profile from './container/Profile';
-import {BrowserRouter as Router,Routes, Route ,Link} from 'react-router-dom'
+// import './App.css';
+// import About from './container/About';
+// import Profile from './container/Profile';
+// import {BrowserRouter as Router,Routes, Route ,Link,} from 'react-router-dom'
 
 // function App() {
 //   // const [state,setState]=useState('')
@@ -24,23 +24,47 @@ import {BrowserRouter as Router,Routes, Route ,Link} from 'react-router-dom'
 
 /////////////////////////////////////////////////////USING RENDERING METHOD//////////////////////////////////////
 
+// function App() {
+//   return (
+//     <div className='App'>
+//       <Router>
+//         <Link to='/about' > About page</Link>
+//         <Link to='/profile'> Profile page </Link>
+//         <Routes>
+//           <Route path='/about' element={'hi everyone this is about page '} />
+//           <Route path='/profile' element={'hello guys this is profile page'} />
+//         </Routes>
+//       </Router>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+///////////////////////////////////////////////////// ROUTE USING BUTTON ///////////////////////////////////////
+
+
+import About from './container/About';
+import Profile from './container/Profile';
+import { Route,useNavigate,Routes } from 'react-router-dom'
+import React from 'react'
+
 function App() {
+    const navigate=useNavigate()
+
   return (
-    <div className='App'>
-      <Router>
-        <Link to='/about' > About page</Link>
-        <Link to='/profile'> Profile page </Link>
-        <Routes>
-          <Route path='/about' element={'hi everyone this is about page '} />
-          <Route path='/profile' element={'hello guys this is profile page'} />
-        </Routes>
-      </Router>
+    <div>
+      <button onClick={()=>navigate('/about')}>About</button>
+      <button onClick={()=>navigate('/profile')}>Profile</button> 
+      <Routes>
+        <Route path='/about' element={<About/>} />
+        <Route  path='/profile' element={<Profile/>} /> 
+      </Routes>     
     </div>
-  );
+  )
 }
 
-export default App;
-
-
-
+export default App
 
