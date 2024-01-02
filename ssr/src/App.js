@@ -94,3 +94,31 @@
 
 // export default App
 
+/////////////////// passing data to one from profile via two ////////////////////
+
+import About from './container/About';
+import Profile from './container/Profile';
+import { Route,useNavigate,Routes } from 'react-router-dom'
+import React, { useState } from 'react'
+
+function App() {
+    const [state,setState]=useState(10)
+    const navigate=useNavigate()
+
+  return (
+    <div>
+      <button onClick={()=>navigate('/about')}>About</button>
+      <button onClick={()=>navigate('/profile')}>Profile</button> 
+      
+      <Routes>
+
+        <Route path='/about' element={<About/>}>  </Route>
+
+        <Route  path='/profile' element={<Profile  data={state} />} > </Route> 
+
+      </Routes>     
+    </div>
+  )
+}
+
+export default App
