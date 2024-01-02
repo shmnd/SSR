@@ -16,12 +16,12 @@
 // //////////////////////////////////////////////////////// to CONTEXT //////////////////
 import React from 'react'
 import One from '../Components/One'
-function Profile(props) {
+function Profile() {
   return (
     <div style={{backgroundColor:'yellow'}}>
       <h1>Profile Page using button methode</h1>
      
-      <One  data={props.data} ></One>
+      <One ></One>
 
     </div>
   )
