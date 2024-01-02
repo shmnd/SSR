@@ -46,25 +46,51 @@
 ///////////////////////////////////////////////////// ROUTE USING BUTTON ///////////////////////////////////////
 
 
-import About from './container/About';
-import Profile from './container/Profile';
-import { Route,useNavigate,Routes } from 'react-router-dom'
-import React from 'react'
+// import About from './container/About';
+// import Profile from './container/Profile';
+// import { Route,useNavigate,Routes } from 'react-router-dom'
+// import React from 'react'
 
-function App() {
-    const navigate=useNavigate()
+// function App() {
+//     const navigate=useNavigate()
 
-  return (
-    <div>
-      <button onClick={()=>navigate('/about')}>About</button>
-      <button onClick={()=>navigate('/profile')}>Profile</button> 
-      <Routes>
-        <Route path='/about' element={<About/>} />
-        <Route  path='/profile' element={<Profile/>} /> 
-      </Routes>     
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <button onClick={()=>navigate('/about')}>About</button>
+//       <button onClick={()=>navigate('/profile')}>Profile</button> 
+//       <Routes>
+//         <Route path='/about' element={<About/>} />
+//         <Route  path='/profile' element={<Profile/>} /> 
+//       </Routes>     
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
+
+
+//////////////////////////////////////////////////// CONTEXT //////////////////////////////////
+
+// import About from './container/About';
+// import Profile from './container/Profile';
+// import { Route,useNavigate,Routes } from 'react-router-dom'
+// import React from 'react'
+
+// function App() {
+//     const navigate=useNavigate()
+
+//   return (
+//     <div>
+//       <button onClick={()=>navigate('/about')}>About</button>
+//       <button onClick={()=>navigate('/profile')}>Profile</button> 
+//       <Routes>
+//         <Route path='/about' element={<About/>} />
+//         <Route  path='/profile' element={<Profile/>} /> 
+//       </Routes>     
+//     </div>
+//   )
+// }
+
+// export default App
 
