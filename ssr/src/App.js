@@ -4,8 +4,7 @@ import About from './container/About';
 import Profile from './container/Profile';
 
 function App() {
-  const [state,setState]=
-  ('')
+  const [state,setState]=useState('')
 
 
   let check
